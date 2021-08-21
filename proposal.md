@@ -3,10 +3,19 @@
 Creating an e-commerce platform for the future!
 Mars Marketplace is a platform that allows users to view and add items to an e-commerce site intended for those living on another planet.
 
+* As a user, I want to be able to create an account and login with my credentials.
+
+* As a user, I want to be able to create a new product listing.
+
+* As a user, I want to be able to view all available products.
+
+* As a user, I want to be able to view singular products by id.
+
+*As a user, I want to be able to delete a posting, if an item becomes unavailable.
+
+
 # Initial Work Distribution
-- Who is front end
-- Who is back end
-- Etc
+Everyone will be making equal contributions to portions of both front end and back end.
 
 
 # Features/User Acceptance Criteria
@@ -55,3 +64,6 @@ server.js
 gitignore
 
 # Database Diagram
+
+[Photo of routes](assets/23.PNG)
+[Start of DB](assets/24.PNG)
