@@ -29,8 +29,14 @@ Seeds -> itemData, galleryData
             ->Title, Description, Price, Date Posted, Location
 
 **NPM Package** 
-Simple Vanilla JS 
+CSS Framework Simple Vanilla JS 
+SASS
 
+NPM package for uploading images (Cloudinary for image hosting)
+S3 bucket from AWS (more challenging but good tool)
+Multer (store photos in db/multipart form data)
+EJS (substitute for handlebars)
+PUG (indentation / tags are gone)
 
 **MVC Structure**
 config
@@ -43,8 +49,8 @@ db
     -schema.sql
 models
     -index.js
-    -items.js
-    -user.js
+    -items.js (belongs to user)
+    -user.js (user hasmanyitems)
 seeds
     -itemData
     -galleryData
