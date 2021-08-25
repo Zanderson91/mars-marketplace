@@ -1,15 +1,34 @@
 const router = require('express').Router();
-const { Post } = require('../../models');
+const { promisify } = require('util')
+//const { Post } = require('../../models');
 const withAuth = require('../../utils/auth');
+const cloudinary = require('cloudinary').v2;
 
-router.post('/', withAuth, async (req, res) => {
+cloudinary.config({
+    cloud_name: process.env.cloud_name,
+    api_key: process.env.api_key,
+    api_secret: process.env.api_secret
+});
+
+const uploadImage = promisify(cloudinary.uploader.upload);
+
+router.post('/', async (req, res) => {
     try {
-        const newPost = await Post.create({
-            ...req.body,
-            user_id: req.session.user_id,
-        });
+        const result = await uploadImage("../../assets/23.png", {
+                resource_type: "image",
+                public_id: "myfolder/mysubfolder/23",
+                overwrite: true,
+                //notification_url: "https://mysite.example.com/notify_endpoint"
+            });
+console.log(result)
 
-        res.status(200).json(newPost);
+        // const newPost = await Post.create({
+        //     ...req.body,
+        //     user_id: req.session.user_id,
+        // });
+
+        // res.status(200).json(newPost);
+        res.json(result)
     } catch (err) {
         res.status(400).json(err);
     }
