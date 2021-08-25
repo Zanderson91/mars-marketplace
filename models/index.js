@@ -1,16 +1,13 @@
-const sequelize = require('../config/connection');
-const seedGallery = require('./galleryData');
-const seedPaintings = require('./itemData');
+const User = require('./User');
+const Gallery = require('./Gallery');
+const Item = require('./Item');
 
-const seedAll = async () => {
-  await sequelize.sync({ force: true });
+Gallery.hasMany(Item, {
+  foreignKey: 'gallery_id',
+});
 
-  await seedGallery();
+Item.belongsTo(Gallery, {
+  foreignKey: 'gallery_id',
+});
 
-  await seedPaintings();
-  await itemData();
-
-  process.exit(0);
-};
-
-seedAll();
+module.exports = { User, Gallery, Item };
