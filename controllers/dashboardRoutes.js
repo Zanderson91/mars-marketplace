@@ -34,3 +34,11 @@ const posts = postData.map((post) => post.get({ plain: true }));
         res.status(500).json(err);
     }
 });
+
+router.get('/newpost', (req, res) => {
+    if (!req.session.logged_in) {
+        res.redirect('/login');
+        return;
+    }
+    res.render('new-post');
+});
