@@ -1,13 +1,37 @@
 const User = require('./User');
-const Gallery = require('./Gallery');
-const Item = require('./Item');
+const Product = require('./Product');
+const Comment = require('./Comment');
 
-Gallery.hasMany(Item, {
-  foreignKey: 'gallery_id',
+User.hasMany(Product, {
+  foreignKey: 'user_id',
 });
 
-Item.belongsTo(Gallery, {
-  foreignKey: 'gallery_id',
+Product.belongsTo(User, {
+  foreignKey: 'user_id',
 });
 
-module.exports = { User, Gallery, Item };
+Comment.belongsTo(User, {
+    foreignKey: 'user_id',
+    onDelete: 'cascade',
+    hooks:true
+});
+
+Comment.belongsTo(Product, {
+    foreignKey: 'product_id',
+    onDelete: 'cascade',
+    hooks: true
+});
+
+User.hasMany(Comment, {
+    foreignKey: 'user_id',
+    onDelete: 'cascade',
+    hooks:true
+});
+
+Product.hasMany(Comment, {
+    foreignKey: 'product_id',
+    onDelete: 'cascade',
+    hooks:true
+})
+
+module.exports = { User, Product, Comment };
