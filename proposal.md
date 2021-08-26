@@ -33,9 +33,6 @@ CSS Framework Simple Vanilla JS
 SASS
 
 NPM package for uploading images (Cloudinary for image hosting)
-Multer (store photos in db/multipart form data)
-EJS (substitute for handlebars)
-PUG (indentation / tags are gone)
 
 **MVC Structure**
 config
