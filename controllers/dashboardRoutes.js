@@ -42,3 +42,21 @@ router.get('/newpost', (req, res) => {
     }
     res.render('new-post');
 });
+
+router.get('/newpost', (req, res) => {
+    if (!req.session.logged_in) {
+        res.redirect('/login');
+        return;
+    }
+    res.render('new-post');
+});
+
+router.get('/editpost/:id', withAuth, async (req, res) => {
+    try {
+        const postData = await Post.findByPk(req.params.id, {
+            attributes: [
+                'id',
+                'title',
+                'content',
+                'date_created'
+            ],
