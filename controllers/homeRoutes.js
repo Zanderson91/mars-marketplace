@@ -45,6 +45,8 @@ router.get('/post/:id', async (req, res) => {
             ],
         });
 
+//WILL NEED TO ADD ABILITY TO CLICK ON PHOTO and display photo
+
         const post = postData.get({ plain: true });
 
         res.render('single-post', {
@@ -55,3 +57,24 @@ router.get('/post/:id', async (req, res) => {
         res.status(500).json(err);
     }
 });
+
+router.get('/login', (req, res) => {
+    if (req.session.logged_in) {
+        res.redirect('/dashboard');
+        return;
+    }
+
+    res.render('login');
+});
+router.get('/signup', (req, res) => {
+    if (req.session.logged_in) {
+        res.redirect('/dashboard');
+        return;
+    }
+
+    res.render('signup');
+});
+
+
+
+module.exports = router;
