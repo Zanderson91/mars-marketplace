@@ -1,6 +1,7 @@
 const User = require('./User');
 const Product = require('./Product');
 const Comment = require('./Comment');
+// const Post = require('./post');
 
 User.hasMany(Product, {
   foreignKey: 'user_id',
@@ -32,6 +33,14 @@ Product.hasMany(Comment, {
     foreignKey: 'product_id',
     onDelete: 'cascade',
     hooks:true
-})
+});
+
+// Post.hasMany(Comment, {
+//   foreignKey: 'product_id',
+//   onDelete: 'cascade',
+//   hooks: true
+// })
+
+
 
 module.exports = { User, Product, Comment };
