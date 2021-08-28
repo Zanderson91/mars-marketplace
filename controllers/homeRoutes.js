@@ -1,37 +1,37 @@
 const router = require('express').Router();
-const { User, Post, Comment } = require('../models');
+const {
+    User,
+    Product,
+    Comment
+} = require('../models');
 
 router.get('/', async (req, res) => {
-    res.render('login')
-//     try {
-//         const postData = await Post.findAll({
-//             include: [
-//                 {
-//                     model: User,
-//                     attributes: ['name'],
-//                 },
-//             ],
-//         });
+    // res.send("test");
+    try {
+        // const postData = await Post.findAll({
+        //     include: [{
+        //         model: User,
+        //         attributes: ['name'],
+        //     }, ],
+        // });
+        // const posts = postData.map((Product) => post.get({
+        //     plain: true
+        // }))
 
-// const posts = postData.map((post) => post.get({
-//     plain: true
+        res.render('login', {
+            //posts,
+            logged_in: req.session.logged_in
+        })
+    } catch (err) {
+        res.status(500).json(err);
+    }
+
 })
-
-// res.render('homepage', {
-//     posts,
-//     logged_in: req.session.logged_in
-// });
-
-// catch (err) {
-//     res.status(500).json(err);
-// }
-// });
 
 router.get('/post/:id', async (req, res) => {
     try {
         const postData = await Post.findByPk(req.params.id, {
-            include: [
-                {
+            include: [{
                     model: User,
                     attributes: ['name'],
                 },
@@ -46,9 +46,11 @@ router.get('/post/:id', async (req, res) => {
             ],
         });
 
-//WILL NEED TO ADD ABILITY TO CLICK ON PHOTO and display photo
+        //WILL NEED TO ADD ABILITY TO CLICK ON PHOTO and display photo
 
-        const post = postData.get({ plain: true });
+        const post = postData.get({
+            plain: true
+        });
 
         res.render('single-post', {
             post,
