@@ -11,29 +11,190 @@
     <link rel="stylesheet" href="./public/css/style.css">
     <title>The Martian Market</title>
 </head>
-<body class="main-bg">
-    <div class="login-container text-c animated flipInX">
-            <div>
-                <h1 class="logo-badge text-whitesmoke"><span class="fa fa-user-circle"></span></h1>
+<div id="wrapper">
+    <div class="overlay"></div>
+     
+         <!-- Sidebar -->
+     <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation">
+      <ul class="nav sidebar-nav">
+        <div class="sidebar-header">
+        <div class="sidebar-brand">
+          <a href="#"></a></div></div>
+          <li><a href="#login">Login</a></li>
+          <li><a href="#signUp">Sign Up</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#category">Categories</a></li>
+          <li><a href="#addList">Add Listing</a></li>
+          
+         </li>
+         <li><a href="#services">Services</a></li>
+         <li><a href="#contact">Contact</a></li>
+         
+        </ul>
+   </nav>
+   <!-- /#sidebar-wrapper -->
+ 
+   <!-- Page Content -->
+         <div id="page-content-wrapper">
+             <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
+                 <span class="hamb-top"></span>
+                 <span class="hamb-middle"></span>
+                 <span class="hamb-bottom"></span>
+                </button>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <h1>The Martian Market</h1>                     
+                        </div>
+                    </div>
+                </div>
             </div>
-                <h3 class="text-whitesmoke">Sign Up</h3>
-            <div class="container-content">
-                <form class="margin-t">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Email" required="">
+            <!-- /#page-content-wrapper -->
+            
+        </div>
+        <!-- /#wrapper -->
+        
+        
+        
+        <!-- Features section-->
+        <section class="py-5">
+            <div class="container py-5">
+                <div class="row text-center">
+           <div class="col-lg-10 mx-auto">
+             <div class="card border-0 shadow">
+               <div class="card-body p-5">
+                 <div class="row">
+                   <div class="col-lg-4 mb-4 mb-lg-0">
+                         <svg class="svg-icon mb-3 text-primary svg-icon-big">
+                           <use xlink:href="#list-details-1"> </use>
+                         </svg>
+                     <h2 class="h5">Search your tool</h2>
+                     <p class="text-muted text-small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                   </div>
+                   <div class="col-lg-4 mb-4 mb-lg-0">
+                         <svg class="svg-icon mb-3 text-primary svg-icon-big">
+                           <use xlink:href="#survey-1"> </use>
+                         </svg>
+                     <h2 class="h5">Gather your info</h2>
+                     <p class="text-muted text-small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
+                   </div>
+                   <div class="col-lg-4">
+                       <svg class="svg-icon mb-3 text-primary svg-icon-big">
+                           <use xlink:href="#stack-1"> </use>
+                         </svg>
+                         <h2 class="h5">Build your startup</h2>
+                     <p class="text-muted text-small mb-0">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod.</p>
                     </div>
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Username" required="">
-                    </div>
-                    <div class="form-group">
-                        <input type="password" class="form-control" placeholder="*******" required="">
-                    </div>
-                    <button type="submit" class="form-button button-l margin-b">Sign In</button>
-                </form>
-                <p class="margin-t text-whitesmoke"><small> The Martian Market &copy; 2021</small> </p>
+                </div>
             </div>
         </div>
-</body>
+    </div>
+</div>
+</div>
+</section>
+
+
+
+     <!-- Categories section-->
+     <section class="pb-5">
+         <div class="container pb-5">
+            <header class="text-center mb-5">
+                <h2 class="mb-1">Explore our categories</h2>
+                <p class="text-muted text-small">Lorem ipsum dolor sit amet, consetetur sadipscing elitr.</p>
+          </header>
+          <div class="row text-center">
+              <div class="col-lg-3 px-lg-2">
+                  <div class="categories-item card border-0 shadow mb-4 reset-anchor hover-transition">
+                <div class="card-body px-4 py-5">
+                      <svg class="svg-icon mb-3">
+                        <use xlink:href="#stack-1"> </use>
+                      </svg>
+                  <h2 class="h5"> <a class="stretched-link reset-anchor-inherit" href="#">Marketing</a></h2>
+                  <p class="categories-item-number small mb-0">2 Items</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 px-lg-2">
+              <div class="categories-item card border-0 shadow mb-4 reset-anchor hover-transition">
+                <div class="card-body px-4 py-5">
+                      <svg class="svg-icon mb-3">
+                        <use xlink:href="#pie-chart-1"> </use>
+                      </svg>
+                  <h2 class="h5"> <a class="stretched-link reset-anchor-inherit" href="#">Project management</a></h2>
+                  <p class="categories-item-number small mb-0">2 Items</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 px-lg-2">
+              <div class="categories-item card border-0 shadow mb-4 reset-anchor hover-transition">
+                <div class="card-body px-4 py-5">
+                      <svg class="svg-icon mb-3">
+                        <use xlink:href="#design-1"> </use>
+                      </svg>
+                  <h2 class="h5"> <a class="stretched-link reset-anchor-inherit" href="#">Design</a></h2>
+                  <p class="categories-item-number small mb-0">2 Items</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 px-lg-2">
+              <div class="categories-item card border-0 shadow mb-4 reset-anchor hover-transition">
+                <div class="card-body px-4 py-5">
+                      <svg class="svg-icon mb-3">
+                        <use xlink:href="#mental-health-1"> </use>
+                      </svg>
+                  <h2 class="h5"> <a class="stretched-link reset-anchor-inherit" href="#">Idea generation</a></h2>
+                  <p class="categories-item-number small mb-0">2 Items</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 px-lg-2">
+              <div class="categories-item card border-0 shadow mb-4 reset-anchor hover-transition">
+                <div class="card-body px-4 py-5">
+                      <svg class="svg-icon mb-3">
+                        <use xlink:href="#bookmark-1"> </use>
+                      </svg>
+                  <h2 class="h5"> <a class="stretched-link reset-anchor-inherit" href="#">Naming</a></h2>
+                  <p class="categories-item-number small mb-0">2 Items</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 px-lg-2">
+              <div class="categories-item card border-0 shadow mb-4 reset-anchor hover-transition">
+                <div class="card-body px-4 py-5">
+                      <svg class="svg-icon mb-3">
+                        <use xlink:href="#checked-window-1"> </use>
+                      </svg>
+                  <h2 class="h5"> <a class="stretched-link reset-anchor-inherit" href="#">Domain names</a></h2>
+                  <p class="categories-item-number small mb-0">2 Items</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 px-lg-2">
+              <div class="categories-item card border-0 shadow mb-4 reset-anchor hover-transition">
+                <div class="card-body px-4 py-5">
+                      <svg class="svg-icon mb-3">
+                        <use xlink:href="#list-details-1"> </use>
+                      </svg>
+                  <h2 class="h5"> <a class="stretched-link reset-anchor-inherit" href="#">Hosting</a></h2>
+                  <p class="categories-item-number small mb-0">2 Items</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-3 px-lg-2">
+              <div class="categories-item card border-0 shadow mb-4 reset-anchor hover-transition">
+                <div class="card-body px-4 py-5">
+                      <svg class="svg-icon mb-3">
+                        <use xlink:href="#sales-up-1"> </use>
+                      </svg>
+                  <h2 class="h5"> <a class="stretched-link reset-anchor-inherit" href="#">Market research</a></h2>
+                  <p class="categories-item-number small mb-0">2 Items</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-12 text-center pt-4"><a class="btn btn-primary" href="#">Show more categories</a></div>
+          </div>
+        </div>
+      </section>
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
