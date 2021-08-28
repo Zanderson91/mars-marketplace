@@ -26,11 +26,64 @@
             <li><a href="#signUp">Sign Up</a></li>
             <li><a href="#home">Home</a></li>
             <li><a href="#category">Categories</a></li>
-            <li><a href="#addList">Add Listing</a></li>
+            <li class="nav-item ml-lg-2 py-2 py-lg-0"><a href="#listingModal" data-toggle="modal">Add listing</a></li>
            <li><a href="#services">Services</a></li>
            <li><a href="#contact">Contact</a></li>
            </ul>
        </nav>
+       <div class="modal fade" id="listingModal" tabindex="-1" role="dialog" aria-labelledby="listingModal" aria-hidden="true">
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header px-lg-5">
+            <h5 class="modal-title" id="listingModalLabel">Add Listing</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
+          </div>
+          <div class="modal-body px-lg-5">
+            <form action="#">
+              <div class="row">
+                <div class="form-group col-lg-6">
+                  <label for="fullName">Full name</label>
+                  <input class="form-control form-control-lg" id="fullName" type="text" name="fullname" placeholder="Your full name">
+                </div>
+                <div class="form-group col-lg-6">
+                  <label for="email">Email Address</label>
+                  <input class="form-control form-control-lg" id="email" type="email" name="email" placeholder="Your email address">
+                </div>
+                <div class="form-group col-lg-6">
+                  <label for="istingTitle">Listing title</label>
+                  <input class="form-control form-control-lg" id="istingTitle" type="text" name="listing-title" placeholder="Title of your title">
+                </div>
+                <div class="form-group col-lg-6">
+                  <label for="listingCategory">Listing category</label>
+                  <select class="selectpicker" id="listingCategory" name="listing-category" data-style="bs-select-form-control" data-title="Select listing category" data-width="100%" required>
+                    <option value="">Rocket Parts</option>
+                    <option value="">Rovers</option>
+                    <option value="">Mars Surface Suits</option>
+                    <option value="">Terraforming Tools</option>
+                    <option value="">Geology</option>
+                    <option value="">Nuclear & Geothermal Reactors</option>
+                    <option value="">Sporting Goods</option>
+                    <option value="">Property</option>
+                  </select>
+                </div>
+                <div class="form-group col-lg-12">
+                  <label for="listingDescription">Listing description</label>
+                  <textarea class="form-control form-control-lg" id="listingDescription" name="listing-description" rows="5" placeholder="Add a description about your listing."></textarea>
+                </div>
+                <div class="form-group col-lg-6 mb-lg-0">
+                  <label for="listingThumb">Listing thumbnail</label>
+                  <input class="form-control form-control-lg-2" id="listingThumb" type="file" name="listing-thumb">
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer justify-content-start px-lg-5">
+            <button class="btn btn-primary" type="submit">Submit listing</button>
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
                     <button type="button" class="hamburger animated fadeInLeft is-closed" data-toggle="offcanvas">
                  <span class="hamb-top"></span>
                  <span class="hamb-middle"></span>
