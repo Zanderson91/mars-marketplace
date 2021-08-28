@@ -18,7 +18,7 @@ router.get('/', async (req, res) => {
         //     plain: true
         // }))
 
-        res.render('login', {
+        res.render('homepage', {
             //posts,
             logged_in: req.session.logged_in
         })
