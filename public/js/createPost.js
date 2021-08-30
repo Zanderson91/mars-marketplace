@@ -7,6 +7,7 @@ const createPost = async (event) => {
     const response = await fetch('/api/post', {
         method: 'POST',
         body: JSON.stringify({
+            //Add all form fields in modal for return
             title,
             content
         }),

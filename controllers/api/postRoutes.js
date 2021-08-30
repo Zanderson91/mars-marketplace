@@ -7,20 +7,30 @@ const cloudinary = require('cloudinary').v2;
 cloudinary.config({
     cloud_name: process.env.cloud_name,
     api_key: process.env.api_key,
-    api_secret: process.env.api_secret
+    api_secret: process.env.api_secret,
+    secure: true
 });
 
 const uploadImage = promisify(cloudinary.uploader.upload);
 
 router.post('/', async (req, res) => {
+    console.log("TEST")
     try {
-        const result = await uploadImage("../../assets/23.png", {
-                resource_type: "image",
-                public_id: "myfolder/mysubfolder/23",
-                overwrite: true,
-                //notification_url: "https://mysite.example.com/notify_endpoint"
-            });
-console.log(result)
+        cloudinary.uploader.upload("./assets/23.png"/*(req.body.file)*/, function (err, result) {
+            console.log(result, err)
+            res.json(result)
+            // Post.create({
+            //     title: req.body.title,
+            //     content: req.body.content,
+            //     image_url: result.url
+            // })
+        })
+//         const result = await uploadImage(require("../../assets/23.png"), {
+//                 resource_type: "image",
+//                 overwrite: true,
+//                 //notification_url: "https://mysite.example.com/notify_endpoint"
+//             });
+// console.log(result)
 
         // const newPost = await Post.create({
         //     ...req.body,
@@ -28,8 +38,9 @@ console.log(result)
         // });
 
         // res.status(200).json(newPost);
-        res.json(result)
+        
     } catch (err) {
+        console.log(err)
         res.status(400).json(err);
     }
 });
