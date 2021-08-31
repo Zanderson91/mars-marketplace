@@ -23,15 +23,26 @@
             <div class="sidebar-brand">
                             <img class="mars" src="/img/hd mars gif.gif" alt="Mars"style="width:40px;height:40px;">
               <a href="#"></a></div></div>
-            <li><a href="#login">Login</a></li>
-            <li><a href="#signUp">Sign Up</a></li>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#category">Categories</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/signUp">Sign Up</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/category">Categories</a></li>
             <li class="nav-item ml-lg-2 py-2 py-lg-0"><a href="#listingModal" data-toggle="modal">Add listing</a></li>
-           <li><a href="#services">Services</a></li>
-           <li><a href="#contact">Contact</a></li>
+           <li><a href="/services">Services</a></li>
+           <li><a href="/contact">Contact</a></li>
            </ul>
        </nav>
+
+{{#if loggedIn}}
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-lg-8">
+                <h1 class="mt-4">Your Dashboard</h1>
+            </div>
+        </div>
+    </div>
+{{/if}}
+
        <div class="modal fade" id="listingModal" tabindex="-1" role="dialog" aria-labelledby="listingModal" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -40,7 +51,7 @@
             <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
           </div>
           <div class="modal-body px-lg-5">
-            <form action="#">
+            <form action="utils\response.json" method="get">
               <div class="row">
                 <div class="form-group col-lg-6">
                   <label for="fullName">Full name</label>
@@ -102,11 +113,12 @@
 
              <!-- /#sidebar-wrapper -->
      
-
+{{#if logged_in}}
+    <script src="/logout.js"></script>
+{{/if}}
 
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-<script src="/js/homepage.js"></script>
 </body>
 </html>
