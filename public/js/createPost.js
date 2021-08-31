@@ -8,8 +8,11 @@ const createPost = async (event) => {
         method: 'POST',
         body: JSON.stringify({
             //Add all form fields in modal for return
-            title,
-            content
+            fullName,
+            email,
+            listingTitle,
+            listingCategory,
+            listingDescription,
         }),
         headers: {
             'Content-Type': 'application/json'
@@ -24,3 +27,4 @@ const createPost = async (event) => {
 }
 
 document.querySelector('.new-post-form').addEventListener('submit', createPost);
+document.querySelector('#listingModal').addEventListener('submit', createPost);

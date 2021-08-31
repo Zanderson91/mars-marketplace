@@ -22,15 +22,16 @@
             <div class="sidebar-header">
             <div class="sidebar-brand">
               <a href="#"></a></div></div>
-            <li><a href="#login">Login</a></li>
-            <li><a href="#signUp">Sign Up</a></li>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#category">Categories</a></li>
+            <li><a href="/login">Login</a></li>
+            <li><a href="/signUp">Sign Up</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/category">Categories</a></li>
             <li class="nav-item ml-lg-2 py-2 py-lg-0"><a href="#listingModal" data-toggle="modal">Add listing</a></li>
-           <li><a href="#services">Services</a></li>
-           <li><a href="#contact">Contact</a></li>
+           <li><a href="/services">Services</a></li>
+           <li><a href="/contact">Contact</a></li>
            </ul>
        </nav>
+
        <div class="modal fade" id="listingModal" tabindex="-1" role="dialog" aria-labelledby="listingModal" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
@@ -39,7 +40,7 @@
             <button class="close" type="button" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button>
           </div>
           <div class="modal-body px-lg-5">
-            <form action="#">
+            <form action="utils\response.json" method="get">
               <div class="row">
                 <div class="form-group col-lg-6">
                   <label for="fullName">Full name</label>
@@ -50,7 +51,7 @@
                   <input class="form-control form-control-lg" id="email" type="email" name="email" placeholder="Your email address">
                 </div>
                 <div class="form-group col-lg-6">
-                  <label for="istingTitle">Listing title</label>
+                  <label for="listingTitle">Listing title</label>
                   <input class="form-control form-control-lg" id="listingTitle" type="text" name="listing-title" placeholder="Title of your title">
                 </div>
                 <div class="form-group col-lg-6">
