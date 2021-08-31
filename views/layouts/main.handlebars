@@ -33,6 +33,16 @@
            </ul>
        </nav>
 
+{{#if loggedIn}}
+    <div class="container">
+        <div class="row mt-5">
+            <div class="col-lg-8">
+                <h1 class="mt-4">Your Dashboard</h1>
+            </div>
+        </div>
+    </div>
+{{/if}}
+
        <div class="modal fade" id="listingModal" tabindex="-1" role="dialog" aria-labelledby="listingModal" aria-hidden="true">
       <div class="modal-dialog modal-lg" role="document">
         <div class="modal-content">
