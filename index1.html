@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
         <!-- Add icon library from Fonts Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./public/css/style.css">
     <title>The Martian Market</title>
 </head>
 <body>
@@ -20,8 +20,8 @@
          <nav class="navbar navbar-inverse fixed-top" id="sidebar-wrapper" role="navigation">
           <ul class="nav sidebar-nav">
             <div class="sidebar-header">
-            <div class="sidebar-brand">
-                            <img class="mars" src="/img/hd mars gif.gif" alt="Mars"style="width:40px;height:40px;">
+              <div class="sidebar-brand">
+              <img class="mars" src="./public/img/hd mars gif.gif" alt="Mars"style="width:40px;height:40px;">
               <a href="#"></a></div></div>
             <li><a href="#login">Login</a></li>
             <li><a href="#signUp">Sign Up</a></li>
@@ -51,11 +51,11 @@
                   <input class="form-control form-control-lg" id="email" type="email" name="email" placeholder="Your email address">
                 </div>
                 <div class="form-group col-lg-6">
-                  <label for="listingTitle">Product Title</label>
-                  <input class="form-control form-control-lg" id="listingTitle" type="text" name="listing-title" placeholder="Product Title">
+                  <label for="istingTitle">Product Title</label>
+                  <input class="form-control form-control-lg" id="listingTitle" type="text" name="listing-title" placeholder="Product title">
                 </div>
                 <div class="form-group col-lg-6">
-                  <label for="listingCategory">Product category</label>
+                  <label for="listingCategory">Product Category</label>
                   <select class="selectpicker" id="listingCategory" name="listing-category" data-style="bs-select-form-control" data-title="Select product category" data-width="100%" required>
                     <option value="">Rocket Parts</option>
                     <option value="">Rovers</option>
@@ -68,11 +68,11 @@
                   </select>
                 </div>
                 <div class="form-group col-lg-12">
-                  <label for="listingDescription">Product description</label>
-                  <textarea class="form-control form-control-lg" id="listingDescription" name="listing-description" rows="5" placeholder="Add a description about your product."></textarea>
+                  <label for="listingDescription">Listing description</label>
+                  <textarea class="form-control form-control-lg" id="listingDescription" name="listing-description" rows="5" placeholder="Add a description about your listing."></textarea>
                 </div>
                 <div class="form-group col-lg-6 mb-lg-0">
-                  <label for="listingThumb">Product thumbnail</label>
+                  <label for="listingThumb">Listing thumbnail</label>
                   <input class="form-control form-control-lg-2" id="listingThumb" type="file" name="listing-thumb">
                 </div>
               </div>
@@ -107,6 +107,6 @@
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
-<script src="/js/homepage.js"></script>
+<script src="./public/js/navbar.js"></script>
 </body>
 </html>
