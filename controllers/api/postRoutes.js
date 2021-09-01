@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const { promisify } = require('util')
-//const { Post } = require('../../models');
+const { Post } = require('../../models');
 const withAuth = require('../../utils/auth');
 const cloudinary = require('cloudinary').v2;
 
@@ -14,16 +14,12 @@ cloudinary.config({
 const uploadImage = promisify(cloudinary.uploader.upload);
 
 router.post('/', async (req, res) => {
-    console.log("TEST")
+    console.log("req.body", req.body)
     try {
         cloudinary.uploader.upload("./assets/23.png"/*(req.body.file)*/, function (err, result) {
-            console.log(result, err)
+            
             res.json(result)
-            // Post.create({
-            //     title: req.body.title,
-            //     content: req.body.content,
-            //     image_url: result.url
-            // })
+            Post.create(req.body)
         })
 //         const result = await uploadImage(require("../../assets/23.png"), {
 //                 resource_type: "image",
