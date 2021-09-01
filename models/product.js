@@ -11,26 +11,29 @@ Product.init(
             primaryKey: true,
             autoIncrement: true,
         },
-        price: {
+        fullName: {
             type: DataTypes.INTEGER,
             allowNull: false,
             primaryKey: true,
         },
-        title: {
-            type: DataTypes.STRING,
-            allowNull: false,
-            defaultValue: "Title",
-          },
-        contents: {
+        email: {
             type: DataTypes.STRING,
             allowNull: false,
           },
-        date_created: {
+        listingTitle: {
+            type: DataTypes.STRING,
+            allowNull: false,
+          },
+        listingCategory: {
             type: DataTypes.DATE,
             allowNull: false,
             defaultValue: DataTypes.NOW,
           },
-        user_id: {
+        listingDescription: {
+          type: DataTypes.STRING,
+          allowNull: false,
+        },
+            user_id: {
             type: DataTypes.INTEGER,
             references: {
               model: 'user',
