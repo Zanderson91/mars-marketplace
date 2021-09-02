@@ -71,6 +71,9 @@ html { height: 100%;}
   color: rgba(198, 71, 16, 0.5);
 }
 
+.btn-L {
+  background-color: rgba(198, 71, 16, 0.5)!important;
+}
 
 /*     Sidebar nav styles        */
 
