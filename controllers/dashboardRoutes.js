@@ -40,9 +40,9 @@ router.get('/rovers', async (req, res) => {
     console.log("ROVERS")
     try {
         const postData = await Product.findAll({
-            where: {
-                listingCategory: product.dataValues.listingCategory
-            },
+            // where: {
+            //     listingCategory: product.dataValues.listingCategory
+            // },
         })
         console.log(postData)
         res.render("rovers", {
@@ -57,9 +57,9 @@ router.get('/rovers', async (req, res) => {
 router.get('/rocket-parts', async (req, res) => {
     try {
         const postData = await Product.findAll({
-            where: {
-                listingCategory: product.dataValues.listingCategory
-            },
+            // where: {
+            //     listingCategory: product.dataValues.listingCategory
+            // },
         })
         console.log(postData)
         res.render("rocket-parts", {
@@ -74,9 +74,9 @@ router.get('/rocket-parts', async (req, res) => {
 router.get('/mars-surface-suits', async (req, res) => {
     try {
         const postData = await Product.findAll({
-            where: {
-                listingCategory: product.dataValues.listingCategory
-            },
+            // where: {
+            //     listingCategory: product.dataValues.listingCategory
+            // },
         })
         console.log(postData)
         res.render("mars-surface-suits", {
@@ -91,9 +91,9 @@ router.get('/mars-surface-suits', async (req, res) => {
 router.get('/terraforming-tools', async (req, res) => {
     try {
         const postData = await Product.findAll({
-            where: {
-                listingCategory: product.dataValues.listingCategory
-            },
+            // where: {
+            //     listingCategory: product.dataValues.listingCategory
+            // },
         })
         console.log(postData)
         res.render("terraforming-tools", {
@@ -108,9 +108,9 @@ router.get('/terraforming-tools', async (req, res) => {
 router.get('/geology', async (req, res) => {
     try {
         const postData = await Product.findAll({
-            where: {
-                listingCategory: product.dataValues.listingCategory
-            },
+            // where: {
+            //     listingCategory: product.dataValues.listingCategory
+            // },
         })
         console.log(postData)
         res.render("geology", {
@@ -125,9 +125,9 @@ router.get('/geology', async (req, res) => {
 router.get('/nuclear-reactors', async (req, res) => {
     try {
         const postData = await Product.findAll({
-            where: {
-                listingCategory: product.dataValues.listingCategory
-            },
+            // where: {
+            //     listingCategory: product.dataValues.listingCategory
+            // },
         })
         console.log(postData)
         res.render("nuclear-reactors", {
@@ -142,10 +142,10 @@ router.get('/nuclear-reactors', async (req, res) => {
 router.get('/sporting-goods', async (req, res) => {
     try {
         const postData = await Product.findAll({
-            where: {
-                listingCategory: product.dataValues.listingCategory
-            },
-        })
+        // where: {
+        //     listingCategory: product.dataValues.listingCategory
+        // },
+    })
         console.log(postData)
         res.render("sporting-goods", {
             postData
@@ -159,9 +159,9 @@ router.get('/sporting-goods', async (req, res) => {
 router.get('/property', async (req, res) => {
     try {
         const postData = await Product.findAll({
-            where: {
-                listingCategory: product.dataValues.listingCategory
-            },
+            // where: {
+            //     listingCategory: product.dataValues.listingCategory
+            // },
         })
         console.log(postData)
         res.render("property", {
