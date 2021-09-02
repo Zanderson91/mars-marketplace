@@ -1,6 +1,10 @@
 const router = require('express').Router();
-const { promisify } = require('util')
-const { Post } = require('../../models');
+const {
+    promisify
+} = require('util')
+const {
+    Product
+} = require('../../models');
 const withAuth = require('../../utils/auth');
 const cloudinary = require('cloudinary').v2;
 
@@ -16,17 +20,17 @@ const uploadImage = promisify(cloudinary.uploader.upload);
 router.post('/', async (req, res) => {
     console.log("req.body", req.body)
     try {
-        cloudinary.uploader.upload("./assets/23.png"/*(req.body.file)*/, function (err, result) {
-            
+        cloudinary.uploader.upload("./assets/23.png" /*(req.body.file)*/ , function (err, result) {
+
             res.json(result)
-            Post.create(req.body)
+            Product.create(req.body)
         })
-//         const result = await uploadImage(require("../../assets/23.png"), {
-//                 resource_type: "image",
-//                 overwrite: true,
-//                 //notification_url: "https://mysite.example.com/notify_endpoint"
-//             });
-// console.log(result)
+        //         const result = await uploadImage(require("../../assets/23.png"), {
+        //                 resource_type: "image",
+        //                 overwrite: true,
+        //                 //notification_url: "https://mysite.example.com/notify_endpoint"
+        //             });
+        // console.log(result)
 
         // const newPost = await Post.create({
         //     ...req.body,
@@ -34,28 +38,28 @@ router.post('/', async (req, res) => {
         // });
 
         // res.status(200).json(newPost);
-        
+
     } catch (err) {
         console.log(err)
         res.status(400).json(err);
     }
 });
 
+
+
+
 router.put('/:id', withAuth, async (req, res) => {
     try {
-        const postData = await Post.update(
-            {
-                title: req.body.title,
-                content: req.body.content,
+        const postData = await Product.update({
+            title: req.body.title,
+            content: req.body.content,
+        }, {
+            where: {
+                id: req.params.id,
+                user_id: req.session.user_id,
             },
-            {
-                where: {
-                    id: req.params.id,
-                    user_id: req.session.user_id,
-                },
-            }
-        );
-    
+        });
+
         if (!postData) {
             res.status(404).json({
                 message: 'No post found with this id!'
@@ -64,15 +68,14 @@ router.put('/:id', withAuth, async (req, res) => {
         }
 
         res.status(200).json(postData);
-        }
-        catch (err) {
-            res.status(500).json(err);
-        }
-        });
+    } catch (err) {
+        res.status(500).json(err);
+    }
+});
 
 router.delete('/:id', withAuth, async (req, res) => {
     try {
-        const postData = await Post.destroy({
+        const postData = await Product.destroy({
             where: {
                 id: req.params.id,
                 user_id: req.session.user_id,
@@ -80,7 +83,9 @@ router.delete('/:id', withAuth, async (req, res) => {
         });
 
         if (!postData) {
-            res.status(404).json({ message: 'No post found with this id!' });
+            res.status(404).json({
+                message: 'No post found with this id!'
+            });
             return;
         }
 

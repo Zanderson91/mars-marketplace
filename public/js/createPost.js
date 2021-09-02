@@ -6,8 +6,10 @@ console.log("createPost")
     const fullName = document.querySelector('#fullName').value.trim();
     const email = document.querySelector('#email').value.trim();
     const listingTitle = document.querySelector('#listingTitle').value.trim();
-    const listingCategory = document.querySelector('#listingCategory').value.trim();
+    const listingCategory = document.querySelector('#listingCategory');
+    const category = listingCategory.value;
     const listingDescription = document.querySelector('#listingDescription').value.trim();
+    console.log(category)
 
     const response = await fetch('/api/post', {
         method: 'POST',
@@ -16,7 +18,7 @@ console.log("createPost")
             fullName,
             email,
             listingTitle,
-            listingCategory,
+            listingCategory:category,
             listingDescription,
         }),
         headers: {
