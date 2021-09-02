@@ -20,6 +20,7 @@ console.log("createPost")
             listingTitle,
             listingCategory:category,
             listingDescription,
+            listingThumb
         }),
         headers: {
             'Content-Type': 'application/json'

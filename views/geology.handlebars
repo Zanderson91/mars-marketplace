@@ -1,4 +1,4 @@
-<div><h1 class="text-green">PROPERTIES PAGE</h1>
+<div><h1>GEOLOGY PAGE</h1>
   {{#each postData as |product|}}
 
     <div class="col-lg-3 px-lg-2">
@@ -8,8 +8,11 @@
         <div class="card-body px-4 py-5">
 
           <h2 class="h5">
-            TITLE:{{product.dataValues.listingTitle}}</h2>
-          <p class="categories-item-number small mb-0">2 Items</p>
+            Email: {{product.dataValues.email}} </h2>
+            Title:{{product.dataValues.listingTitle}}</h2>
+            Description:{{product.dataValues.listingDescription}}</h2>
+            Photo: {{product.dataValues.listingThumb}} </h2>
+          
         </div>
       </div>
     </div>
