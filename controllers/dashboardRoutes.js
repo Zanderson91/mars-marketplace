@@ -40,10 +40,131 @@ router.get('/rovers', async (req, res) => {
     console.log("ROVERS")
     try {
         const postData = await Product.findAll({
-//where listingCategory = "rovers"
+            where: {
+                listingCategory: product.dataValues.listingCategory
+            },
         })
         console.log(postData)
         res.render("rovers", {
+            postData
+        })
+    } catch (err) {
+        console.log(err)
+        res.status(400).json(err);
+    }
+})
+
+router.get('/rocket-parts', async (req, res) => {
+    try {
+        const postData = await Product.findAll({
+            where: {
+                listingCategory: product.dataValues.listingCategory
+            },
+        })
+        console.log(postData)
+        res.render("rocket-parts", {
+            postData
+        })
+    } catch (err) {
+        console.log(err)
+        res.status(400).json(err);
+    }
+})
+
+router.get('/mars-surface-suits', async (req, res) => {
+    try {
+        const postData = await Product.findAll({
+            where: {
+                listingCategory: product.dataValues.listingCategory
+            },
+        })
+        console.log(postData)
+        res.render("mars-surface-suits", {
+            postData
+        })
+    } catch (err) {
+        console.log(err)
+        res.status(400).json(err);
+    }
+})
+
+router.get('/terraforming-tools', async (req, res) => {
+    try {
+        const postData = await Product.findAll({
+            where: {
+                listingCategory: product.dataValues.listingCategory
+            },
+        })
+        console.log(postData)
+        res.render("terraforming-tools", {
+            postData
+        })
+    } catch (err) {
+        console.log(err)
+        res.status(400).json(err);
+    }
+})
+
+router.get('/geology', async (req, res) => {
+    try {
+        const postData = await Product.findAll({
+            where: {
+                listingCategory: product.dataValues.listingCategory
+            },
+        })
+        console.log(postData)
+        res.render("geology", {
+            postData
+        })
+    } catch (err) {
+        console.log(err)
+        res.status(400).json(err);
+    }
+})
+
+router.get('/nuclear-reactors', async (req, res) => {
+    try {
+        const postData = await Product.findAll({
+            where: {
+                listingCategory: product.dataValues.listingCategory
+            },
+        })
+        console.log(postData)
+        res.render("nuclear-reactors", {
+            postData
+        })
+    } catch (err) {
+        console.log(err)
+        res.status(400).json(err);
+    }
+})
+
+router.get('/sporting-goods', async (req, res) => {
+    try {
+        const postData = await Product.findAll({
+            where: {
+                listingCategory: product.dataValues.listingCategory
+            },
+        })
+        console.log(postData)
+        res.render("sporting-goods", {
+            postData
+        })
+    } catch (err) {
+        console.log(err)
+        res.status(400).json(err);
+    }
+})
+
+router.get('/property', async (req, res) => {
+    try {
+        const postData = await Product.findAll({
+            where: {
+                listingCategory: product.dataValues.listingCategory
+            },
+        })
+        console.log(postData)
+        res.render("property", {
             postData
         })
     } catch (err) {
