@@ -67,6 +67,10 @@ html { height: 100%;}
   padding-top: 20px;
 }
 
+.stretched-link {
+  color: rgba(198, 71, 16, 0.5);
+}
+
 
 /*     Sidebar nav styles        */
 
