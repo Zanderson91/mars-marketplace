@@ -33,6 +33,10 @@ Product.init(
           type: DataTypes.STRING,
           allowNull: false,
         },
+        listingThumb: {
+          type: DataTypes.BLOB,
+          allowNull: false,
+        },
             user_id: {
             type: DataTypes.INTEGER,
             references: {
