@@ -12,7 +12,7 @@ Product.init(
             autoIncrement: true,
         },
         fullName: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: false,
             primaryKey: true,
         },
@@ -25,7 +25,7 @@ Product.init(
             allowNull: false,
           },
         listingCategory: {
-            type: DataTypes.DATE,
+            type: DataTypes.STRING,
             allowNull: false,
             defaultValue: DataTypes.NOW,
           },
