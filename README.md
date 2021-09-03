@@ -1,3 +1,4 @@
+![localhost_3006_](https://user-images.githubusercontent.com/82851741/131939489-c2498923-a535-454c-a1d2-44dbaa715737.png)
 # Mars-Marketplace
 project2
 
@@ -11,16 +12,12 @@ This marketplace app has photos of items that people in planet mars have listed 
 • Javascript
 • HTML
 • CSS
-• Nodejs
-• Express
-• Mysql
-
 
 # Link
-https://dashboard.heroku.com/apps/mars-marketplace
+
 
 # Screenshot
-https://mars-marketplace1.herokuapp.com/
+![localhost_3006_](https://user-images.githubusercontent.com/82851741/131939489-c2498923-a535-454c-a1d2-44dbaa715737.png)
 
 # Authors
 Zach Anderson: https://github.com/Zanderson91
