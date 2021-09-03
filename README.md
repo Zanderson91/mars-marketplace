@@ -11,12 +11,16 @@ This marketplace app has photos of items that people in planet mars have listed 
 • Javascript
 • HTML
 • CSS
+• Nodejs
+• Express
+• Mysql
+
 
 # Link
-
+https://dashboard.heroku.com/apps/mars-marketplace
 
 # Screenshot
-
+https://mars-marketplace1.herokuapp.com/
 
 # Authors
 Zach Anderson: https://github.com/Zanderson91
