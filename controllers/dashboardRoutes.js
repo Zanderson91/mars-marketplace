@@ -2,6 +2,34 @@ const router = require('express').Router();
 const { User, Product, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
+router.post('/', async (req, res) => {
+    console.log("req.body", req.body)
+    try {
+        cloudinary.uploader.upload("./assets/23.png" /*(req.body.file)*/ , function (err, result) {
+
+            res.json(result)
+            Product.create(req.body)
+        })
+        //         const result = await uploadImage(require("../../assets/23.png"), {
+        //                 resource_type: "image",
+        //                 overwrite: true,
+        //                 //notification_url: "https://mysite.example.com/notify_endpoint"
+        //             });
+        // console.log(result)
+
+        // const newPost = await Post.create({
+        //     ...req.body,
+        //     user_id: req.session.user_id,
+        // });
+
+        // res.status(200).json(newPost);
+
+    } catch (err) {
+        console.log(err)
+        res.status(400).json(err);
+    }
+});
+
 router.get('/', withAuth, async (req, res) => {
     console.log("dashboardRoutes", req.session)
     try {
